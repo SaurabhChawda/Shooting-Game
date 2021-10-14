@@ -41,6 +41,7 @@ function clickResultHandler() {
     if (buttonLimit === 5) {
         result();
         btnClick.disabled = true;
+        break;
     }
 
     for (let i = 0; i < 100; i++) {
