@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooting Game</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="reset">
+    <main id="form">
+
+        <h1 id="form-heading">SHOOTING GAME</h1>
+        <input id="first-player-input" type="text" placeholder="Enter the First Player Name">
+        <input id="second-player-input" type="text" placeholder="Enter the Second Player Name">
+        <button id="btn-form-input"> Submit </button>
+        <output id="error-message"></output>
+    </main>
+
+    <div id="output">
+
+    <div id="first-output">
+        <h3><output id="first-player-output">Player 1 </output></h3>
+        <h3>Won:<output id="first-player-result">0</output></h3>
+    </div>
+    <div id="second-output">
+       <h3><output id="second-player-output">Player 2</output></h3>
+       <h3>Won:<output id="second-player-result">0</output></h3>
+    </div>
+       <button id="btn-result"> Start Game </button>
+       <div>
+        <h1>🎉🎊Winner🎊🎉</h1>
+        <h3><output id="Final-result"></output></h3>
+    </div>
+    </div>
+</div>
+    <script src="app.js" type="text/javascript"></script>
+
+</body>
+
+</html>
