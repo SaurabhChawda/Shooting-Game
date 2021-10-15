@@ -91,9 +91,9 @@ function generateRandomNumber(){
 
 function result() {
     if (incOne >= incTwo) {
-        finalResult.innerHTML = "🎉🎊Congratulations " + playerOneOutput.value + " You have won the Game🎊🎉" 
+        finalResult.innerHTML = "🎉Congratulations " + playerOneOutput.value + " You have won the Game🎉" 
     } else {
-        finalResult.innerHTML = "🎉🎊Congratulations " + playerTwoOutput.value + " You have won the Game🎊🎉"
+        finalResult.innerHTML = "🎉Congratulations " + playerTwoOutput.value + " You have won the Game🎉"
     }
 }
 

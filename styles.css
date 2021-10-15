@@ -27,7 +27,7 @@ body{
     font-size:larger;
     font-weight: 600;
     border-radius: 0.5rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 #second-player-input{
     display: block;
@@ -36,7 +36,7 @@ body{
     font-size:larger;
     font-weight: 600;
     border-radius: 0.5rem; 
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 #output{
     text-align: center;
@@ -44,7 +44,7 @@ body{
     border-radius: 1rem;
     margin: 1rem auto;
     padding:1rem 1rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 #first-output{
     float: left;
@@ -53,7 +53,7 @@ body{
     background-color:snow;
     border-style: solid;
     border-radius: 1rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 #second-output{
     float: right;
@@ -62,7 +62,7 @@ body{
     background-color: snow;
     border-style: solid;
     border-radius: 1rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
     
 }
 #btn-result{
