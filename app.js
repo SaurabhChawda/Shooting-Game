@@ -5,12 +5,6 @@ var btnforminput = document.querySelector("#btn-form-input") // Submit Button
 var playerOneOutput = document.querySelector("#first-player-output") // For First Player Name Ouput
 var playerTwoOutput = document.querySelector("#second-player-output") // For Second Player Name Ouput
 
-var plyOne = document.querySelector("#first-player-result") // For First Player Result 
-var PlyTwo = document.querySelector("#second-player-result") // For Second Player Result 
-
-var btnClick = document.querySelector("#btn-result") //For Button Game
-var finalResult = document.querySelector("#Final-result") //For Final Result
-
 
 btnforminput.addEventListener('click', clickHandler)
 
@@ -35,19 +29,37 @@ var incOne = 0,
     playerTwo = 100;
 
 function clickResultHandler() {
-    btnforminput.disabled = true
+    btnforminput.disabled = true;
+    ResetGame.disabled = true;
     buttonLimit = buttonLimit + 1
+    checkLimitToFive();
+    generateRandomNumber();
 
-    if (buttonLimit === 5) {
+}
+
+function checkLimitToFive() {
+    if (buttonLimit == 5) {
         result();
         btnClick.disabled = true;
+        ResetGame.disabled = false;
+
     }
 
+}
+
+var plyOne = document.querySelector("#first-player-result") // For First Player Result 
+var PlyTwo = document.querySelector("#second-player-result") // For Second Player Result 
+
+var btnClick = document.querySelector("#btn-result") //For Button Game
+
+var finalResult = document.querySelector("#Final-result") //For Final Result
+
+function generateRandomNumber() {
     for (let i = 0; i < 100; i++) {
-        var playerOneDec = Math.floor(Math.random() * 5);
+        var playerOneDec = Math.floor(Math.random() * 5) + 0;
         playerOne = playerOne - playerOneDec
 
-        var playerTwoDec = Math.floor(Math.random() * 5);
+        var playerTwoDec = Math.floor(Math.random() * 5) + 0;
         playerTwo = playerTwo - playerTwoDec
 
         if (playerOne <= 0) {
@@ -56,6 +68,7 @@ function clickResultHandler() {
 
             if (incOne >= 3) {
                 result();
+                ResetGame.disabled = false;
             }
             break;
         }
@@ -65,30 +78,26 @@ function clickResultHandler() {
 
             if (incTwo >= 3) {
                 result();
+                ResetGame.disabled = false;
             }
             break;
         }
     }
+
 }
 
 function result() {
     if (incOne >= incTwo) {
         finalResult.innerHTML = "🎉🎊Congratulations " + playerOneOutput.value + "🎊🎉"
-        reset();
     } else {
         finalResult.innerHTML = "🎉🎊Congratulations " + playerTwoOutput.value + "🎊🎉"
-        reset();
     }
 }
 
-function reset() {
-    firstPLyName.value = null;
-    secondPLyName.value = null;
-    plyOne.innerHTML = 0;
-    PlyTwo.innerHTML = 0;
-    incOne = 0;
-    incTwo = 0;
-    buttonLimit = 0;
-    btnClick.disabled = true;
-    btnforminput.disabled = false;
+var ResetGame = document.querySelector("#btn-reset") //For Button Reset
+
+ResetGame.addEventListener('click', refresh)
+
+function refresh() {
+    window.location.reload();
 }

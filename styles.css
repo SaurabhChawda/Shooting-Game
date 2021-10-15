@@ -61,11 +61,19 @@ body{
     
 }
 #btn-result{
-    display: block;
+    display: inline;
     padding:0.5rem 2rem;
     font-size:large;
     background-color:limegreen;
     color:white;
     border-radius: 0.5rem;
-    margin:7rem auto 0rem;
+    margin:2rem auto 0rem;
+}
+#btn-reset{
+    display: inline;
+    padding:0.5rem 2rem;
+    font-size:large;
+    background-color:red;
+    color:white;
+    border-radius: 0.5rem;
 }
